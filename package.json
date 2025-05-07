@@ -1,0 +1,17 @@
+{
+  "name": "chess-web-application",
+  "version": "1.0.0",
+  "description": "A chess web application with grandmaster-level AI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "chess",
+    "stockfish",
+    "game",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT"
+}

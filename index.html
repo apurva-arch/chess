@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Web Application - Grandmaster Level</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chess Web Application</h1>
+        
+        <div class="game-info">
+            <div id="status">Game Status: White's turn</div>
+            <button id="new-game">New Game</button>
+            <div class="color-choice">
+                <span>Play as: </span>
+                <label>
+                    <input type="radio" name="player-color" value="white" checked> White
+                </label>
+                <label>
+                    <input type="radio" name="player-color" value="black"> Black
+                </label>
+            </div>
+        </div>
+        
+        <div class="engine-controls">
+            <div class="engine-strength">
+                <label for="engine-level">Engine Strength: <span id="level-display">Grandmaster (Level 20)</span></label>
+                <input type="range" id="engine-level" min="0" max="20" value="20" step="1">
+            </div>
+            <div class="engine-info">
+                <div id="engine-status">Engine: Initializing...</div>
+                <div id="engine-thinking" class="hidden">Thinking: <span id="engine-depth">Depth 0</span> <span id="engine-score">Score 0.0</span></div>
+            </div>
+        </div>
+        
+        <div id="board-container">
+            <div id="chessboard"></div>
+        </div>
+        
+        <div class="promotion-modal" id="promotion-modal">
+            <div class="promotion-pieces">
+                <div class="promotion-piece" data-piece="q">♕</div>
+                <div class="promotion-piece" data-piece="r">♖</div>
+                <div class="promotion-piece" data-piece="b">♗</div>
+                <div class="promotion-piece" data-piece="n">♘</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chess Engine Scripts -->
+    <script src="engine/chess-utils.js"></script>
+    <script src="engine/stockfish.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
